@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f273fd6c-6beb-49c1-925c-225064b6cf2e" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1UZh1zUyTqeAmeZmhH0k8hjmD18" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="RunManager" selected="Python.Main">
+    <configuration name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="SBL+" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="SBL_Lexer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="SBL+" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SBL_Lexer.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="SBL_Parser" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="SBL+" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SBL_Parser.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.Main" />
+        <item itemvalue="Python.SBL_Parser" />
+        <item itemvalue="Python.SBL_Lexer" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f273fd6c-6beb-49c1-925c-225064b6cf2e" name="Default Changelist" comment="" />
+      <created>1575569814090</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1575569814090</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="388" y="197" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1575592804091">
+      <screen x="0" y="23" width="1280" height="732" />
+    </state>
+    <state x="388" y="197" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1280.732@0.23.1280.732" timestamp="1575592804091" />
+    <state x="328" y="122" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1575570043453">
+      <screen x="0" y="23" width="1280" height="728" />
+    </state>
+    <state x="328" y="122" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1280.728@0.23.1280.728" timestamp="1575570043453" />
+    <state x="318" y="32" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1575572343748">
+      <screen x="0" y="23" width="1280" height="729" />
+    </state>
+    <state x="318" y="32" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1280.729@0.23.1280.729" timestamp="1575572343748" />
+    <state width="1218" height="166" key="GridCell.Tab.0.bottom" timestamp="1575869693885">
+      <screen x="0" y="23" width="1280" height="727" />
+    </state>
+    <state width="1218" height="166" key="GridCell.Tab.0.bottom/0.23.1280.726@0.23.1280.726" timestamp="1575860143399" />
+    <state width="1218" height="166" key="GridCell.Tab.0.bottom/0.23.1280.727@0.23.1280.727" timestamp="1575869693885" />
+    <state width="1218" height="168" key="GridCell.Tab.0.bottom/0.23.1280.729@0.23.1280.729" timestamp="1575591490458" />
+    <state width="1218" height="168" key="GridCell.Tab.0.bottom/0.23.1280.730@0.23.1280.730" timestamp="1575591944590" />
+    <state width="1218" height="168" key="GridCell.Tab.0.bottom/0.23.1280.732@0.23.1280.732" timestamp="1575653816104" />
+    <state width="1218" height="166" key="GridCell.Tab.0.center" timestamp="1575869693884">
+      <screen x="0" y="23" width="1280" height="727" />
+    </state>
+    <state width="1218" height="166" key="GridCell.Tab.0.center/0.23.1280.726@0.23.1280.726" timestamp="1575860143398" />
+    <state width="1218" height="166" key="GridCell.Tab.0.center/0.23.1280.727@0.23.1280.727" timestamp="1575869693884" />
+    <state width="1218" height="168" key="GridCell.Tab.0.center/0.23.1280.729@0.23.1280.729" timestamp="1575591490457" />
+    <state width="1218" height="168" key="GridCell.Tab.0.center/0.23.1280.730@0.23.1280.730" timestamp="1575591944589" />
+    <state width="1218" height="168" key="GridCell.Tab.0.center/0.23.1280.732@0.23.1280.732" timestamp="1575653816103" />
+    <state width="1218" height="166" key="GridCell.Tab.0.left" timestamp="1575869693884">
+      <screen x="0" y="23" width="1280" height="727" />
+    </state>
+    <state width="1218" height="166" key="GridCell.Tab.0.left/0.23.1280.726@0.23.1280.726" timestamp="1575860143398" />
+    <state width="1218" height="166" key="GridCell.Tab.0.left/0.23.1280.727@0.23.1280.727" timestamp="1575869693884" />
+    <state width="1218" height="168" key="GridCell.Tab.0.left/0.23.1280.729@0.23.1280.729" timestamp="1575591490457" />
+    <state width="1218" height="168" key="GridCell.Tab.0.left/0.23.1280.730@0.23.1280.730" timestamp="1575591944589" />
+    <state width="1218" height="168" key="GridCell.Tab.0.left/0.23.1280.732@0.23.1280.732" timestamp="1575653816102" />
+    <state width="1218" height="166" key="GridCell.Tab.0.right" timestamp="1575869693885">
+      <screen x="0" y="23" width="1280" height="727" />
+    </state>
+    <state width="1218" height="166" key="GridCell.Tab.0.right/0.23.1280.726@0.23.1280.726" timestamp="1575860143399" />
+    <state width="1218" height="166" key="GridCell.Tab.0.right/0.23.1280.727@0.23.1280.727" timestamp="1575869693885" />
+    <state width="1218" height="168" key="GridCell.Tab.0.right/0.23.1280.729@0.23.1280.729" timestamp="1575591490458" />
+    <state width="1218" height="168" key="GridCell.Tab.0.right/0.23.1280.730@0.23.1280.730" timestamp="1575591944590" />
+    <state width="1218" height="168" key="GridCell.Tab.0.right/0.23.1280.732@0.23.1280.732" timestamp="1575653816103" />
+  </component>
+</project>
