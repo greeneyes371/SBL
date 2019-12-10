@@ -1,10 +1,10 @@
 from sly import Parser
 from SBL_Lexer import SBL_Lexer
 import Functions as builtin
+import operator
 
 class SBL_Parser(Parser):
     tokens = SBL_Lexer.tokens
-    names = {}
 
     def __init__(self):
         self.names = {}
@@ -17,17 +17,25 @@ class SBL_Parser(Parser):
         }
 
     #Grammar rules
-    @_('functionList')
-    def statement(self, p):
-        return p.functionList
+    @_('statementList')
+    def declaration(self, p):
+        return p.statementList
 
-    @_('function "," functionList')
-    def functionList(self, p):
-        p.function, p.functionList
+    @_('function "," statementList')
+    def statementList(self, p):
+        return p.function, p.statementList
+
+    @_('assignment "," statementList')
+    def statementList(self, p):
+        return p.assignment, p.statementList
+
+    @_('statement')
+    def statementList(self, p):
+        return p.statement
 
     @_('function')
-    def functionList(self, p):
-        p.function
+    def statement(self, p):
+        return p.function
 
     @_('assignment')
     def statement(self, p):
@@ -39,6 +47,13 @@ class SBL_Parser(Parser):
             raise Exception("Variables are immutable.")
         else:
             self.names[p.ID] = p.STRING
+
+    @_('ID ASSIGN NUMBER')
+    def assignment(self, p):
+        if p.ID in self.names.keys():
+            raise Exception("Variables are immutable.")
+        else:
+            self.names[p.ID] = p.NUMBER
 
     @_('ID ASSIGN ID')
     def assignment(self, p):
@@ -57,9 +72,24 @@ class SBL_Parser(Parser):
         else:
             self.names[p.ID] = p.expr
 
-    @_('NUMBER OPERATOR NUMBER')
+    @_('expr OPERATOR expr')
     def expr(self, p):
-        return ('+', p.NUMBER0, p.NUMBER1)
+        operators = {
+            '+': operator.add,
+            '-': operator.sub,
+            '*': operator.mul,
+            '/': operator.truediv
+        }
+
+        return operators[p.OPERATOR](p.expr0, p.expr1)
+
+    @_('"(" expr ")"')
+    def expr(self, p):
+        return p.expr
+
+    @_('NUMBER')
+    def expr(self, p):
+        return p.NUMBER
 
     @_('FUNCTION "{" argumentList "}"')
     def function(self, p):
@@ -81,9 +111,9 @@ class SBL_Parser(Parser):
     def argument(self, p):
         return self.names[p.ID]
 
-    @_('NUMBER')
+    @_('expr')
     def argument(self, p):
-        return p.NUMBER
+        return p.expr
 
     @_('STRING')
     def argument(self, p):
@@ -97,15 +127,17 @@ class SBL_Parser(Parser):
     def empty(self, p):
         pass
 
-#parser = SBL_Parser()
-#lexer = SBL_Lexer()
+parser = SBL_Parser()
+lexer = SBL_Lexer()
 
-#data = '''
-#    x := \"This is a message.\"
-#    y := \"This is another message.\"
-#    PRINT{x}
-#    PRINT{y}
-#    z := 34 + 43
-#'''
-#for line in data.splitlines():
-#    result = parser.parse(lexer.tokenize(line))
+data = '''
+    x := \"This is a message.\"
+    y := \"This is another message.\"
+    PRINT{x} 
+    PRINT{22} 
+    z := (34 + 23)
+    PRINT{z}
+    EXIT{}
+'''
+for line in data.splitlines():
+    result = parser.parse(lexer.tokenize(line))

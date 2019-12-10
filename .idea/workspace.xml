@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f273fd6c-6beb-49c1-925c-225064b6cf2e" name="Default Changelist" comment="" />
+    <list default="true" id="f273fd6c-6beb-49c1-925c-225064b6cf2e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SBL_Parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/SBL_Parser.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,10 +22,14 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1UZh1zUyTqeAmeZmhH0k8hjmD18" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -28,8 +37,30 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
-  <component name="RunManager" selected="Python.Main">
+  <component name="RunManager" selected="Python.SBL_Parser">
+    <configuration name="Functions" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="SBL+" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Functions.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="SBL+" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -95,8 +126,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Main" />
         <item itemvalue="Python.SBL_Parser" />
+        <item itemvalue="Python.Main" />
+        <item itemvalue="Python.Functions" />
         <item itemvalue="Python.SBL_Lexer" />
       </list>
     </recent_temporary>
@@ -139,37 +171,45 @@
       <screen x="0" y="23" width="1280" height="729" />
     </state>
     <state x="318" y="32" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1280.729@0.23.1280.729" timestamp="1575572343748" />
-    <state width="1218" height="166" key="GridCell.Tab.0.bottom" timestamp="1575869693885">
-      <screen x="0" y="23" width="1280" height="727" />
+    <state width="1218" height="96" key="GridCell.Tab.0.bottom" timestamp="1576008317477">
+      <screen x="0" y="23" width="1280" height="729" />
     </state>
     <state width="1218" height="166" key="GridCell.Tab.0.bottom/0.23.1280.726@0.23.1280.726" timestamp="1575860143399" />
-    <state width="1218" height="166" key="GridCell.Tab.0.bottom/0.23.1280.727@0.23.1280.727" timestamp="1575869693885" />
-    <state width="1218" height="168" key="GridCell.Tab.0.bottom/0.23.1280.729@0.23.1280.729" timestamp="1575591490458" />
+    <state width="1218" height="166" key="GridCell.Tab.0.bottom/0.23.1280.727@0.23.1280.727" timestamp="1575873678945" />
+    <state width="1218" height="166" key="GridCell.Tab.0.bottom/0.23.1280.728@0.23.1280.728" timestamp="1575925566972" />
+    <state width="1218" height="96" key="GridCell.Tab.0.bottom/0.23.1280.729@0.23.1280.729" timestamp="1576008317477" />
     <state width="1218" height="168" key="GridCell.Tab.0.bottom/0.23.1280.730@0.23.1280.730" timestamp="1575591944590" />
     <state width="1218" height="168" key="GridCell.Tab.0.bottom/0.23.1280.732@0.23.1280.732" timestamp="1575653816104" />
-    <state width="1218" height="166" key="GridCell.Tab.0.center" timestamp="1575869693884">
-      <screen x="0" y="23" width="1280" height="727" />
+    <state width="1218" height="96" key="GridCell.Tab.0.center" timestamp="1576008317476">
+      <screen x="0" y="23" width="1280" height="729" />
     </state>
     <state width="1218" height="166" key="GridCell.Tab.0.center/0.23.1280.726@0.23.1280.726" timestamp="1575860143398" />
-    <state width="1218" height="166" key="GridCell.Tab.0.center/0.23.1280.727@0.23.1280.727" timestamp="1575869693884" />
-    <state width="1218" height="168" key="GridCell.Tab.0.center/0.23.1280.729@0.23.1280.729" timestamp="1575591490457" />
+    <state width="1218" height="166" key="GridCell.Tab.0.center/0.23.1280.727@0.23.1280.727" timestamp="1575873678944" />
+    <state width="1218" height="166" key="GridCell.Tab.0.center/0.23.1280.728@0.23.1280.728" timestamp="1575925566971" />
+    <state width="1218" height="96" key="GridCell.Tab.0.center/0.23.1280.729@0.23.1280.729" timestamp="1576008317476" />
     <state width="1218" height="168" key="GridCell.Tab.0.center/0.23.1280.730@0.23.1280.730" timestamp="1575591944589" />
     <state width="1218" height="168" key="GridCell.Tab.0.center/0.23.1280.732@0.23.1280.732" timestamp="1575653816103" />
-    <state width="1218" height="166" key="GridCell.Tab.0.left" timestamp="1575869693884">
-      <screen x="0" y="23" width="1280" height="727" />
+    <state width="1218" height="96" key="GridCell.Tab.0.left" timestamp="1576008317474">
+      <screen x="0" y="23" width="1280" height="729" />
     </state>
     <state width="1218" height="166" key="GridCell.Tab.0.left/0.23.1280.726@0.23.1280.726" timestamp="1575860143398" />
-    <state width="1218" height="166" key="GridCell.Tab.0.left/0.23.1280.727@0.23.1280.727" timestamp="1575869693884" />
-    <state width="1218" height="168" key="GridCell.Tab.0.left/0.23.1280.729@0.23.1280.729" timestamp="1575591490457" />
+    <state width="1218" height="166" key="GridCell.Tab.0.left/0.23.1280.727@0.23.1280.727" timestamp="1575873678943" />
+    <state width="1218" height="166" key="GridCell.Tab.0.left/0.23.1280.728@0.23.1280.728" timestamp="1575925566970" />
+    <state width="1218" height="96" key="GridCell.Tab.0.left/0.23.1280.729@0.23.1280.729" timestamp="1576008317474" />
     <state width="1218" height="168" key="GridCell.Tab.0.left/0.23.1280.730@0.23.1280.730" timestamp="1575591944589" />
     <state width="1218" height="168" key="GridCell.Tab.0.left/0.23.1280.732@0.23.1280.732" timestamp="1575653816102" />
-    <state width="1218" height="166" key="GridCell.Tab.0.right" timestamp="1575869693885">
-      <screen x="0" y="23" width="1280" height="727" />
+    <state width="1218" height="96" key="GridCell.Tab.0.right" timestamp="1576008317476">
+      <screen x="0" y="23" width="1280" height="729" />
     </state>
     <state width="1218" height="166" key="GridCell.Tab.0.right/0.23.1280.726@0.23.1280.726" timestamp="1575860143399" />
-    <state width="1218" height="166" key="GridCell.Tab.0.right/0.23.1280.727@0.23.1280.727" timestamp="1575869693885" />
-    <state width="1218" height="168" key="GridCell.Tab.0.right/0.23.1280.729@0.23.1280.729" timestamp="1575591490458" />
+    <state width="1218" height="166" key="GridCell.Tab.0.right/0.23.1280.727@0.23.1280.727" timestamp="1575873678944" />
+    <state width="1218" height="166" key="GridCell.Tab.0.right/0.23.1280.728@0.23.1280.728" timestamp="1575925566971" />
+    <state width="1218" height="96" key="GridCell.Tab.0.right/0.23.1280.729@0.23.1280.729" timestamp="1576008317476" />
     <state width="1218" height="168" key="GridCell.Tab.0.right/0.23.1280.730@0.23.1280.730" timestamp="1575591944590" />
     <state width="1218" height="168" key="GridCell.Tab.0.right/0.23.1280.732@0.23.1280.732" timestamp="1575653816103" />
+    <state x="305" y="76" width="670" height="676" key="search.everywhere.popup" timestamp="1575931619145">
+      <screen x="0" y="23" width="1280" height="729" />
+    </state>
+    <state x="305" y="76" width="670" height="676" key="search.everywhere.popup/0.23.1280.729@0.23.1280.729" timestamp="1575931619145" />
   </component>
 </project>
