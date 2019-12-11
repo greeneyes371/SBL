@@ -195,5 +195,5 @@ lexer = SBL_Lexer()
 data = '''
     RUN { tester.sbl }
 '''
-for line in data.splitlines():
-    result = parser.parse(lexer.tokenize(line))
+#for line in data.splitlines():
+#    result = parser.parse(lexer.tokenize(line))

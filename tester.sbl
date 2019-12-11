@@ -6,4 +6,3 @@ SEND { conn1 : x }
 CLOSE { conn1 }
 DESTROY { server1 }
 SHOW {}
-EXIT {}

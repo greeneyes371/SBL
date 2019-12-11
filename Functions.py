@@ -7,7 +7,7 @@ def createServer(port):
     host = socket.gethostname()
 
     server.bind((host, int(port)))
-    print('connected to :' + host + " port : " + str(port))
+    print('Connected to: ' + host + ", PORT : " + str(port))
     return server
 
 def listenForConnection(server):
