@@ -27,6 +27,7 @@ class SBL_Lexer(Lexer):
             'SEND': 'FUNCTION',
             'CLOSE': 'FUNCTION',
             'DESTROY': 'FUNCTION',
+            'DELETE': 'FUNCTION',
             'RUN': 'FUNCTION',
             'PRINT': 'FUNCTION',
             'SHOW': 'FUNCTION',
@@ -41,7 +42,8 @@ class SBL_Lexer(Lexer):
 
         return t
 
-#lexer = SBL_Lexer()
+lexer = SBL_Lexer()
+
 #data = '''
 #    x := \"This is a message.\"
 #    PRINT{x}

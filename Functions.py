@@ -32,21 +32,26 @@ def sendMessage(connection, message):
     connection.sendall(str.encode(message))
     print("Message succesfully sent.\n" )
 
-def closeConnection(connection):
+def closeConnection(connection, name):
     print("Closing connection: ", connection.getsockname())
     connection.close()
-    print("Succesfully closed connection. ")
+    print(name + " successfully closed.\n")
+
+def closeServer(server, name):
+    print("Shutting down server: " + name)
+    server.close()
+    print("Server successfully closed.\n")
 
 def display(message):
-    print(message)
+    print(message + "\n")
 
 def show(vars):
     if len(vars.keys()) == 0:
         print('There are no initialized variables.')
 
     else:
-        for k,v in vars.items():
-            print(k + ' == ' + v)
+        for k in vars.keys():
+            print(k)
 
 def close():
     exit()

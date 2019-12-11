@@ -110,7 +110,7 @@ class SBL_Parser(Parser):
                 raise Exception("Connection does not exist.")
 
             else:
-                builtin.closeConnection(self.names[arguments[0]])
+                builtin.closeConnection(self.names[arguments[0]], arguments[0])
                 del self.names[arguments[0]]
 
         elif p.FUNCTION == 'DESTROY':
@@ -118,7 +118,14 @@ class SBL_Parser(Parser):
                 raise Exception("Server does not exist.")
 
             else:
-                builtin.closeConnection(self.names[arguments[0]])
+                builtin.closeServer(self.names[arguments[0]], arguments[0])
+                del self.names[arguments[0]]
+
+        elif p.FUNCTION == 'DELETE':
+            if arguments[0] not in self.names:
+                raise Exception("Variable does not exist.")
+
+            else:
                 del self.names[arguments[0]]
 
         elif p.FUNCTION == 'RUN':
@@ -134,8 +141,12 @@ class SBL_Parser(Parser):
                     break
 
         elif p.FUNCTION == 'PRINT':
-            if arguments[0] in self.names:
-                builtin.display(self.names[arguments[0]])
+            if arguments[0].startswith('\"'):
+                builtin.display(arguments[0][1:len(arguments[0])-1])
+
+            elif arguments[0] in self.names:
+                value = self.names[arguments[0]]
+                builtin.display(value[1: len(value) -1])
 
             else:
                 builtin.display(arguments[0])
@@ -192,8 +203,8 @@ class SBL_Parser(Parser):
 parser = SBL_Parser()
 lexer = SBL_Lexer()
 
-data = '''
-    RUN { tester.sbl }
-'''
+#data = '''
+#    RUN { tester.sbl }
+#'''
 #for line in data.splitlines():
 #    result = parser.parse(lexer.tokenize(line))
