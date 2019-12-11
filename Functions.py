@@ -6,7 +6,8 @@ def createServer(port):
     server = socket.socket(family=socket.AF_INET, type=socket.SOCK_STREAM)
     host = socket.gethostname()
 
-    server.bind((host, port))
+    server.bind((host, int(port)))
+    print('connected to :' + host + " port : " + str(port))
     return server
 
 def listenForConnection(server):
@@ -25,22 +26,21 @@ def receiveMessage(connection):
         if not data:
             break
 
-        return data
+        return data.decode()
 
 def sendMessage(connection, message):
     connection.sendall(str.encode(message))
-    print("Message succesfully sent. \n" )
+    print("Message succesfully sent.\n" )
 
 def closeConnection(connection):
     print("Closing connection: ", connection.getsockname())
     connection.close()
     print("Succesfully closed connection. ")
 
-
-def PRINT(message):
+def display(message):
     print(message)
 
-def SHOWVARS(vars):
+def show(vars):
     if len(vars.keys()) == 0:
         print('There are no initialized variables.')
 
@@ -48,15 +48,15 @@ def SHOWVARS(vars):
         for k,v in vars.items():
             print(k + ' == ' + v)
 
-def EXIT(opt):
+def close():
     exit()
 
 
-#server1 = createServer(53241)
+#server1 = createServer(12345)
 #connection1 = listenForConnection(server1)
 #connection2 = listenForConnection(server1)
 
-#print("Received: " + receiveMessage(connection1).decode())
+#print("Received: " + receiveMessage(connection1))
 #print("Received: " + receiveMessage(connection2).decode())
 
 #sendMessage(connection1, "Hello Moto1")

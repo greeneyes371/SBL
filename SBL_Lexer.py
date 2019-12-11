@@ -2,11 +2,10 @@ from sly import Lexer
 
 class SBL_Lexer(Lexer):
     #Set of Tokens
-    tokens = {'ID', 'NUMBER', 'STRING', 'ASSIGN',
-              'OPERATOR', 'FUNCTION'}
+    tokens = {'ID', 'NUMBER', 'STRING', 'ASSIGN', 'FUNCTION'}
 
     #Set of tokens to be interpreted as literals
-    literals = {'{', '}', ':', '(', ')', '\.', ','}
+    literals = {'{', '}', ':', '(', ')', ',', '.'}
 
     #String containing ignored characters
     ignore = ' \t'
@@ -14,21 +13,23 @@ class SBL_Lexer(Lexer):
     ignore_comment = r'%.*'
 
     #Regular expressions for tokens.
-    OPERATOR = "\+" or "-" or "\*" or "/"
     STRING = r'\"(.*?)"'
+    NUMBER = r'\d+'
     ASSIGN = r':='
 
     #Special cases
     @_(r'[a-zA-Z_][a-zA-Z0-9_]*')
     def ID(self, t):
         identifiers = {
-            'createServer': 'FUNCTION',
-            'sendMessage': 'FUNCTION',
-            'receiveMessage': 'FUNCTION',
-            'closeServer': 'FUNCTION',
-            'getHostName': 'FUNCTION',
+            'CREATE': 'FUNCTION',
+            'LISTEN': 'FUNCTION',
+            'RECEIVE': 'FUNCTION',
+            'SEND': 'FUNCTION',
+            'CLOSE': 'FUNCTION',
+            'DESTROY': 'FUNCTION',
+            'RUN': 'FUNCTION',
             'PRINT': 'FUNCTION',
-            'SHOWVARS': 'FUNCTION',
+            'SHOW': 'FUNCTION',
             'EXIT': 'FUNCTION'
         }
 
@@ -40,16 +41,11 @@ class SBL_Lexer(Lexer):
 
         return t
 
-    @_(r'\d+')
-    def NUMBER(self, t):
-        t.value = int(t.value)
-        return t
-
 #lexer = SBL_Lexer()
 #data = '''
 #    x := \"This is a message.\"
 #    PRINT{x}
 #    PRINT{\"This is another message.\"}
 #'''
-#for tok in lexer.tokenize(data):
+#for tok in lexer.tokenize("filename.sbl"):
 #    print('Type = %r , value = %r ' % (tok.type, tok.value))

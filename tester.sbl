@@ -1,0 +1,9 @@
+CREATE { server1 : 12345 }
+LISTEN { server1 : conn1 }
+PRINT { RECEIVE { conn1 } }
+x := "This is my first programming language!"
+SEND { conn1 : x }
+CLOSE { conn1 }
+DESTROY { server1 }
+SHOW {}
+EXIT {}

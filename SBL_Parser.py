@@ -1,20 +1,12 @@
 from sly import Parser
 from SBL_Lexer import SBL_Lexer
 import Functions as builtin
-import operator
 
 class SBL_Parser(Parser):
     tokens = SBL_Lexer.tokens
 
     def __init__(self):
         self.names = {}
-        self.functions = {
-            'PRINT': builtin.PRINT,
-            'SHOWVARS': builtin.SHOWVARS,
-            'EXIT': builtin.EXIT,
-            'createServer': builtin.createServer,
-            'listen': builtin.listenForConnection
-        }
 
     #Grammar rules
     @_('statementList')
@@ -65,43 +57,98 @@ class SBL_Parser(Parser):
             else:
                 self.names[p.ID0] = self.names[p.ID1]
 
-    @_('ID ASSIGN expr')
+    @_('ID ASSIGN function')
     def assignment(self, p):
-        if p.ID in self.names.keys():
+        if p.ID in self.names:
             raise Exception("Variables are immutable.")
+
         else:
-            self.names[p.ID] = p.expr
-
-    @_('expr OPERATOR expr')
-    def expr(self, p):
-        operators = {
-            '+': operator.add,
-            '-': operator.sub,
-            '*': operator.mul,
-            '/': operator.truediv
-        }
-
-        return operators[p.OPERATOR](p.expr0, p.expr1)
-
-    @_('"(" expr ")"')
-    def expr(self, p):
-        return p.expr
-
-    @_('NUMBER')
-    def expr(self, p):
-        return p.NUMBER
+            self.names[p.ID] = p.function
 
     @_('FUNCTION "{" argumentList "}"')
     def function(self, p):
-        if p.FUNCTION == 'SHOWVARS':
-            self.functions[p.FUNCTION](self.names)
+        try:
+            arguments = p.argumentList.split(':')
+        except:
+            pass
 
-        else:
-            self.functions[p.FUNCTION](p.argumentList)
+        if p.FUNCTION == 'CREATE':
+            if arguments[0] in self.names:
+                raise Exception("Server name already exists.")
+            else:
+                self.names[arguments[0]] = builtin.createServer(arguments[1])
+
+        elif p.FUNCTION == 'LISTEN':
+            if arguments[0] not in self.names:
+                raise Exception("Server does not exist.")
+
+            elif arguments[1] in self.names:
+                raise Exception("Connection name already exists.")
+
+            else:
+                self.names[arguments[1]] = builtin.listenForConnection(self.names[arguments[0]])
+
+        elif p.FUNCTION == 'RECEIVE':
+            if arguments[0] not in self.names:
+                raise Exception("Connection does not exist.")
+
+            else:
+                return builtin.receiveMessage(self.names[arguments[0]])
+
+        elif p.FUNCTION == 'SEND':
+            if arguments[0] not in self.names:
+                raise Exception("Connection does not exist.")
+
+            elif arguments[1] in self.names:
+                builtin.sendMessage(self.names[arguments[0]], self.names[arguments[1]])
+
+            else:
+                builtin.sendMessage(self.names[arguments[0]], arguments[1])
+
+        elif p.FUNCTION == 'CLOSE':
+            if arguments[0] not in self.names:
+                raise Exception("Connection does not exist.")
+
+            else:
+                builtin.closeConnection(self.names[arguments[0]])
+                del self.names[arguments[0]]
+
+        elif p.FUNCTION == 'DESTROY':
+            if arguments[0] not in self.names:
+                raise Exception("Server does not exist.")
+
+            else:
+                builtin.closeConnection(self.names[arguments[0]])
+                del self.names[arguments[0]]
+
+        elif p.FUNCTION == 'RUN':
+            try:
+                file = open(arguments[0])
+            except:
+                print('File does not exist.')
+
+            for line in file.readlines():
+                try:
+                    parser.parse(lexer.tokenize(line))
+                except EOFError:
+                    break
+
+        elif p.FUNCTION == 'PRINT':
+            if arguments[0] in self.names:
+                builtin.display(self.names[arguments[0]])
+
+            else:
+                builtin.display(arguments[0])
+
+        elif p.FUNCTION == 'SHOW':
+            builtin.show(self.names)
+
+        elif p.FUNCTION == 'EXIT':
+            builtin.close()
 
     @_('argument ":" argumentList')
     def argumentList(self, p):
-        return p.argument, p.argumentList
+        return p.argument + ":" + p.argumentList
 
     @_('argument')
     def argumentList(self, p):
@@ -109,15 +156,30 @@ class SBL_Parser(Parser):
 
     @_('ID')
     def argument(self, p):
-        return self.names[p.ID]
+        return p.ID
 
-    @_('expr')
+    @_('NUMBER')
     def argument(self, p):
-        return p.expr
+        return p.NUMBER
 
     @_('STRING')
     def argument(self, p):
         return p.STRING
+
+    @_('function')
+    def argument(self, p):
+        return p.function
+
+    @_('filename')
+    def argument(self, p):
+        return p.filename
+
+    @_('ID "." ID')
+    def filename(self, p):
+        if p.ID1 != "sbl":
+            raise Exception('File must be in SBL+ format.')
+        else:
+            return p.ID0 + "." + p.ID1
 
     @_('empty')
     def argument(self, p):
@@ -131,13 +193,7 @@ parser = SBL_Parser()
 lexer = SBL_Lexer()
 
 data = '''
-    x := \"This is a message.\"
-    y := \"This is another message.\"
-    PRINT{x} 
-    PRINT{22} 
-    z := (34 + 23)
-    PRINT{z}
-    EXIT{}
+    RUN { tester.sbl }
 '''
 for line in data.splitlines():
     result = parser.parse(lexer.tokenize(line))
