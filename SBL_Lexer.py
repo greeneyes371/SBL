@@ -2,7 +2,7 @@ from sly import Lexer
 
 class SBL_Lexer(Lexer):
     #Set of Tokens
-    tokens = {'ID', 'NUMBER', 'STRING', 'ASSIGN', 'FUNCTION'}
+    tokens = {'ID', 'NUMBER', 'STRING', 'ASSIGN', 'FUNCTION', 'COMMENT'}
 
     #Set of tokens to be interpreted as literals
     literals = {'{', '}', ':', '(', ')', ',', '.'}
@@ -10,10 +10,10 @@ class SBL_Lexer(Lexer):
     #String containing ignored characters
     ignore = ' \t'
     ignore_newline = r'\n+'
-    ignore_comment = r'%.*'
 
     #Regular expressions for tokens.
     STRING = r'\"(.*?)"'
+    COMMENT = r'%.*'
     NUMBER = r'\d+'
     ASSIGN = r':='
 

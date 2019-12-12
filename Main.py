@@ -1,6 +1,6 @@
 from SBL_Lexer import SBL_Lexer
 from SBL_Parser import SBL_Parser
-print('Welcome to SBL+ ; a Server Based Language')
+print('Welcome to SBL+ : a Server Based Language')
 print('SBL+ ver 1.0.0')
 
 lexer = SBL_Lexer()

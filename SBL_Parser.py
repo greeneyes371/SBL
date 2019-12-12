@@ -33,6 +33,10 @@ class SBL_Parser(Parser):
     def statement(self, p):
         return p.assignment
 
+    @_('COMMENT')
+    def statement(self, p):
+        pass
+
     @_('ID ASSIGN STRING')
     def assignment(self, p):
         if p.ID in self.names.keys():
@@ -135,10 +139,12 @@ class SBL_Parser(Parser):
                 print('File does not exist.')
 
             for line in file.readlines():
-                try:
-                    parser.parse(lexer.tokenize(line))
-                except EOFError:
-                    break
+                if line.strip():
+                    try:
+                        parser.parse(lexer.tokenize(line))
+
+                    except EOFError:
+                        return
 
         elif p.FUNCTION == 'PRINT':
             if arguments[0].startswith('\"'):

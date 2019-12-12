@@ -1,10 +1,13 @@
 CREATE { server1 : 12345 }
 LISTEN { server1 : conn1 }
+
+% this is a comment.
 PRINT { RECEIVE { conn1 } }
-PRINT { "message1"} , PRINT { "message2" }
 x := "This is my first programming language!"
 SEND { conn1 : x }
+
+% this is another comment.
 CLOSE { conn1 }
 DESTROY { server1 }
-SHOW {} , DELETE{x}, SHOW {}
+
 EXIT{}
