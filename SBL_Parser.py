@@ -147,10 +147,7 @@ class SBL_Parser(Parser):
                         return
 
         elif p.FUNCTION == 'PRINT':
-            if arguments[0].startswith('\"'):
-                builtin.display(arguments[0][1:len(arguments[0])-1])
-
-            elif arguments[0] in self.names:
+            if arguments[0] in self.names:
                 value = self.names[arguments[0]]
                 builtin.display(value[1: len(value) -1])
 

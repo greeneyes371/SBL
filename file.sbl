@@ -1,0 +1,8 @@
+CREATE{server1 : 12345}
+LISTEN{server1: connection1}
+
+PRINT{RECEIVE{connection1}
+SEND{connection1 : "this is a message."}
+
+CLOSE{connection1}
+DESTROY{server1}
