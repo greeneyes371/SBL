@@ -9,7 +9,16 @@ class SBL_Lexer(Lexer):
 
     #String containing ignored characters
     ignore = ' \t'
-    ignore_newline = r'\n+'
+
+    #Line number tracking
+    @_(r'\n+')
+    def ignore_newline(self, t):
+        self.lineno += t.value.count('\n')
+
+    #Error handling
+    def error(self, t):
+        print('Line %d: Bad character %r' % (self.lineno, t.value[0]))
+        self.index += 1
 
     #Regular expressions for tokens.
     STRING = r'\"(.*?)"'
@@ -47,7 +56,8 @@ lexer = SBL_Lexer()
 #data = '''
 #    x := \"This is a message.\"
 #    PRINT{x}
+#    ;
 #    PRINT{\"This is another message.\"}
 #'''
-#for tok in lexer.tokenize("filename.sbl"):
+#for tok in lexer.tokenize(data):
 #    print('Type = %r , value = %r ' % (tok.type, tok.value))

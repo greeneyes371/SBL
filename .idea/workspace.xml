@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="f273fd6c-6beb-49c1-925c-225064b6cf2e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Functions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SBL_Lexer.py" beforeDir="false" afterPath="$PROJECT_DIR$/SBL_Lexer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SBL_Parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/SBL_Parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tester1.sbl" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,12 +132,34 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="echo-client" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="SBL+" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/echo-client.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.Main" />
+        <item itemvalue="Python.SBL_Lexer" />
+        <item itemvalue="Python.echo-client" />
         <item itemvalue="Python.SBL_Parser" />
         <item itemvalue="Python.Functions" />
-        <item itemvalue="Python.SBL_Lexer" />
       </list>
     </recent_temporary>
   </component>
@@ -179,50 +202,58 @@
       <screen x="0" y="23" width="1280" height="729" />
     </state>
     <state x="318" y="32" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1280.729@0.23.1280.729" timestamp="1575572343748" />
-    <state width="1238" height="118" key="GridCell.Tab.0.bottom" timestamp="1576467988765">
+    <state width="1238" height="118" key="GridCell.Tab.0.bottom" timestamp="1576631551663">
       <screen x="0" y="23" width="1280" height="724" />
     </state>
-    <state width="1238" height="118" key="GridCell.Tab.0.bottom/0.23.1280.723@0.23.1280.723" timestamp="1576465351537" />
-    <state width="1238" height="118" key="GridCell.Tab.0.bottom/0.23.1280.724@0.23.1280.724" timestamp="1576467988765" />
+    <state width="1238" height="118" key="GridCell.Tab.0.bottom/0.23.1280.723@0.23.1280.723" timestamp="1576615766502" />
+    <state width="1238" height="118" key="GridCell.Tab.0.bottom/0.23.1280.724@0.23.1280.724" timestamp="1576631551663" />
     <state width="1238" height="249" key="GridCell.Tab.0.bottom/0.23.1280.726@0.23.1280.726" timestamp="1576106388057" />
     <state width="1238" height="119" key="GridCell.Tab.0.bottom/0.23.1280.727@0.23.1280.727" timestamp="1576114066118" />
     <state width="1238" height="220" key="GridCell.Tab.0.bottom/0.23.1280.728@0.23.1280.728" timestamp="1576104645517" />
     <state width="1238" height="249" key="GridCell.Tab.0.bottom/0.23.1280.729@0.23.1280.729" timestamp="1576104911928" />
     <state width="1218" height="96" key="GridCell.Tab.0.bottom/0.23.1280.730@0.23.1280.730" timestamp="1576043645150" />
     <state width="1218" height="168" key="GridCell.Tab.0.bottom/0.23.1280.732@0.23.1280.732" timestamp="1575653816104" />
-    <state width="1238" height="118" key="GridCell.Tab.0.center" timestamp="1576467988764">
+    <state width="1238" height="118" key="GridCell.Tab.0.center" timestamp="1576631551662">
       <screen x="0" y="23" width="1280" height="724" />
     </state>
-    <state width="1238" height="118" key="GridCell.Tab.0.center/0.23.1280.723@0.23.1280.723" timestamp="1576465351536" />
-    <state width="1238" height="118" key="GridCell.Tab.0.center/0.23.1280.724@0.23.1280.724" timestamp="1576467988764" />
+    <state width="1238" height="118" key="GridCell.Tab.0.center/0.23.1280.723@0.23.1280.723" timestamp="1576615766500" />
+    <state width="1238" height="118" key="GridCell.Tab.0.center/0.23.1280.724@0.23.1280.724" timestamp="1576631551662" />
     <state width="1238" height="249" key="GridCell.Tab.0.center/0.23.1280.726@0.23.1280.726" timestamp="1576106388054" />
     <state width="1238" height="119" key="GridCell.Tab.0.center/0.23.1280.727@0.23.1280.727" timestamp="1576114066117" />
     <state width="1238" height="220" key="GridCell.Tab.0.center/0.23.1280.728@0.23.1280.728" timestamp="1576104645516" />
     <state width="1238" height="249" key="GridCell.Tab.0.center/0.23.1280.729@0.23.1280.729" timestamp="1576104911927" />
     <state width="1218" height="96" key="GridCell.Tab.0.center/0.23.1280.730@0.23.1280.730" timestamp="1576043645147" />
     <state width="1218" height="168" key="GridCell.Tab.0.center/0.23.1280.732@0.23.1280.732" timestamp="1575653816103" />
-    <state width="1238" height="118" key="GridCell.Tab.0.left" timestamp="1576467988763">
+    <state width="1238" height="118" key="GridCell.Tab.0.left" timestamp="1576631551662">
       <screen x="0" y="23" width="1280" height="724" />
     </state>
-    <state width="1238" height="118" key="GridCell.Tab.0.left/0.23.1280.723@0.23.1280.723" timestamp="1576465351536" />
-    <state width="1238" height="118" key="GridCell.Tab.0.left/0.23.1280.724@0.23.1280.724" timestamp="1576467988763" />
+    <state width="1238" height="118" key="GridCell.Tab.0.left/0.23.1280.723@0.23.1280.723" timestamp="1576615766499" />
+    <state width="1238" height="118" key="GridCell.Tab.0.left/0.23.1280.724@0.23.1280.724" timestamp="1576631551662" />
     <state width="1238" height="249" key="GridCell.Tab.0.left/0.23.1280.726@0.23.1280.726" timestamp="1576106388053" />
     <state width="1238" height="119" key="GridCell.Tab.0.left/0.23.1280.727@0.23.1280.727" timestamp="1576114066117" />
     <state width="1238" height="220" key="GridCell.Tab.0.left/0.23.1280.728@0.23.1280.728" timestamp="1576104645515" />
     <state width="1238" height="249" key="GridCell.Tab.0.left/0.23.1280.729@0.23.1280.729" timestamp="1576104911926" />
     <state width="1218" height="96" key="GridCell.Tab.0.left/0.23.1280.730@0.23.1280.730" timestamp="1576043645146" />
     <state width="1218" height="168" key="GridCell.Tab.0.left/0.23.1280.732@0.23.1280.732" timestamp="1575653816102" />
-    <state width="1238" height="118" key="GridCell.Tab.0.right" timestamp="1576467988764">
+    <state width="1238" height="118" key="GridCell.Tab.0.right" timestamp="1576631551663">
       <screen x="0" y="23" width="1280" height="724" />
     </state>
-    <state width="1238" height="118" key="GridCell.Tab.0.right/0.23.1280.723@0.23.1280.723" timestamp="1576465351537" />
-    <state width="1238" height="118" key="GridCell.Tab.0.right/0.23.1280.724@0.23.1280.724" timestamp="1576467988764" />
+    <state width="1238" height="118" key="GridCell.Tab.0.right/0.23.1280.723@0.23.1280.723" timestamp="1576615766501" />
+    <state width="1238" height="118" key="GridCell.Tab.0.right/0.23.1280.724@0.23.1280.724" timestamp="1576631551663" />
     <state width="1238" height="249" key="GridCell.Tab.0.right/0.23.1280.726@0.23.1280.726" timestamp="1576106388055" />
     <state width="1238" height="119" key="GridCell.Tab.0.right/0.23.1280.727@0.23.1280.727" timestamp="1576114066118" />
     <state width="1238" height="220" key="GridCell.Tab.0.right/0.23.1280.728@0.23.1280.728" timestamp="1576104645516" />
     <state width="1238" height="249" key="GridCell.Tab.0.right/0.23.1280.729@0.23.1280.729" timestamp="1576104911927" />
     <state width="1218" height="96" key="GridCell.Tab.0.right/0.23.1280.730@0.23.1280.730" timestamp="1576043645149" />
     <state width="1218" height="168" key="GridCell.Tab.0.right/0.23.1280.732@0.23.1280.732" timestamp="1575653816103" />
+    <state x="490" y="102" key="RollbackChangesDialog" timestamp="1576617391697">
+      <screen x="0" y="23" width="1280" height="723" />
+    </state>
+    <state x="490" y="102" key="RollbackChangesDialog/0.23.1280.723@0.23.1280.723" timestamp="1576617391697" />
+    <state x="240" y="124" key="Vcs.Push.Dialog.v2" timestamp="1576617381167">
+      <screen x="0" y="23" width="1280" height="723" />
+    </state>
+    <state x="240" y="124" key="Vcs.Push.Dialog.v2/0.23.1280.723@0.23.1280.723" timestamp="1576617381167" />
     <state x="305" y="76" width="670" height="676" key="search.everywhere.popup" timestamp="1575931619145">
       <screen x="0" y="23" width="1280" height="729" />
     </state>

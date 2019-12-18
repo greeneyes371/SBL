@@ -143,6 +143,9 @@ class SBL_Parser(Parser):
                     try:
                         parser.parse(lexer.tokenize(line))
 
+                    except SyntaxError:
+                        print('Invalid syntax.')
+
                     except EOFError:
                         return
 
@@ -151,8 +154,14 @@ class SBL_Parser(Parser):
                 value = self.names[arguments[0]]
                 builtin.display(value[1: len(value) -1])
 
-            else:
+            elif arguments[0].isdigit():
                 builtin.display(arguments[0])
+
+            elif arguments[0].startswith("\""):
+                builtin.display(arguments[0][1:len(arguments[0]) - 1])
+
+            else:
+                builtin.display("Variable does not exist.")
 
         elif p.FUNCTION == 'SHOW':
             builtin.show(self.names)
@@ -202,6 +211,7 @@ class SBL_Parser(Parser):
     @_('')
     def empty(self, p):
         pass
+
 
 parser = SBL_Parser()
 lexer = SBL_Lexer()
